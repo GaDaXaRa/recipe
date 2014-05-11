@@ -22,14 +22,7 @@
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     UILabel *recipe = [[UILabel alloc] initWithFrame:viewRect];
     recipe.text = @"Pollo al curry estilo thai. Ingredientes: Pechuga de pollo, lima, leche de coco";
-    [self.view addSubview:recipe];
-    NSArray *ingredientes = @[@"Pechuga de pollo", @"Curry", @"Lima", @"Pimentón", @"Leche de coco"];
-    NSArray *instrucciones = @[@"Cortar la pechuga de pollo en tiras", @"En un bol de cristal: poner el pollo troceado y añadir el zumo de una lima, el curry, la sal y el pimentón"];
-    NSLog(@"Pollo al cuury estilo thai");
-    NSLog(@"Ingredientes: %@", ingredientes);
-    NSLog(@"Instrucciones: %@", instrucciones);
-
-    
+    [self.view addSubview:recipe];    
 }
 
 - (void)didReceiveMemoryWarning
