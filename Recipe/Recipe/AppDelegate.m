@@ -7,16 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *ingredientes = @[@"Pechuga de pollo", @"Curry", @"Lima", @"Pimentón", @"Leche de coco"];
-    NSArray *instrucciones = @[@"Cortar la pechuga de pollo en tiras", @"En un bol de cristal: poner el pollo troceado y añadir el zumo de una lima, el curry, la sal y el pimentón"];
-    NSLog(@"Pollo al cuury estilo thai");
-    NSLog(@"Ingredientes: %@", ingredientes);
-    NSLog(@"Instrucciones: %@", instrucciones);
+    CGRect viewRect =[[UIScreen mainScreen] bounds];
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    self.viewController = [[ViewController alloc] init];
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
